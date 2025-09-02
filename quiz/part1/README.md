@@ -26,6 +26,42 @@ yak Buka aja W3school dan kerjakan soal soal berikut
 //tapi tanpa backtick juga ga masalah sih yg penting output sesuai
 
 // algoritma
+const prompt = require("prompt-sync")();
+
+let nama = prompt("Masukkan nama kamu: ");
+
+while (nama.trim() === "" || nama === null) {
+  nama = prompt("Masukkan nama kamu (tidak boleh kosong):");
+}
+
+
+
+while(true) {
+    let peran = parseInt(prompt(`1. Ksatria
+2. Tabib
+3. Penyihir
+Pilih Peranmu untuk memulai game: `));
+switch (peran) {
+  case 1:
+    console.log(`halo Ksatria ${nama} , kamu dapat menyerang dengan senjatamu!`);
+    break;
+
+  case 2:
+    console.log(`halo Tabib ${nama} , kamu akan membantu temanmu yang terluka`);
+    break;
+
+  case 3:
+    console.log(`halo Penyihir ${nama} , ciptakan keajaiban yang membantu kemenanganmu!`);
+    break;
+
+  default:
+    console.log("Pilihan tidak valid!");
+    continue;
+    }
+break;
+}
+
+
 //isi algoritma mu disini (AWAS KALO GA DI ISI!!!!)
 
 
@@ -55,7 +91,62 @@ let bulan = "februari"; // assign nilai variabel bulan disini! (dengan angka ant
 let tahun = 2001; // assign nilai variabel tahun disini! (dengan angka antara 1900 - 2200)
 
 //code switch case kamu disini
+const prompt = require("prompt-sync")();
+
+let tanggal = parseInt(prompt("Masukkan tanggal (1-31): "));
+let bulan = parseInt(prompt("Masukkan bulan (1-12): "));
+let tahun = parseInt(prompt("Masukkan tahun: "));
+
+let namaBulan = "";
+
+switch (bulan) {
+  case 1:
+    namaBulan = "Januari";
+    break;
+  case 2:
+    namaBulan = "Februari";
+    break;
+  case 3:
+    namaBulan = "Maret";
+    break;
+  case 4:
+    namaBulan = "April";
+    break;
+  case 5:
+    namaBulan = "Mei";
+    break;
+  case 6:
+    namaBulan = "Juni";
+    break;
+  case 7:
+    namaBulan = "Juli";
+    break;
+  case 8:
+    namaBulan = "Agustus";
+    break;
+  case 9:
+    namaBulan = "September";
+    break;
+  case 10:
+    namaBulan = "Oktober";
+    break;
+  case 11:
+    namaBulan = "November";
+    break;
+  case 12:
+    namaBulan = "Desember";
+    break;
+  default:
+    console.log("Bulan tidak valid!");
+    break;
+}
+
+if (namaBulan !== "") {
+  console.log(`${hari} ${namaBulan} ${tahun}`);
+}
+
 ```
+
 
 ---
 video biar rada paham lah, soalnya ini awal kepahitan ngoding wkwk:

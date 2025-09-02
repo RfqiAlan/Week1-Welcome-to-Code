@@ -7,6 +7,19 @@
 // Untuk membuat tantangan ini lebih menarik, kamu juga diminta untuk membuat suatu looping yang menghitung maju dan 
 // menghitung mundur. Jangan lupa tampilkan di console juga judul 'LOOPING PERTAMA' dan 'LOOPING KEDUA'.
 //tampilkan output yang menunjukan kalau looping itu maju pada looping pertama dan mundur pada looping kedua
+console.log("LOOPING PERTAMA");
+let i = 1;
+while (i <= 10) {
+  console.log("Looping bertambah, ke-" + i);
+  i += 1;
+}
+
+console.log("LOOPING KEDUA");
+let j = 10;
+while (j >= 1) {
+  console.log("Looping berkurang, ke-" + j);
+  j -= 1;
+}
 ```
 ## Soal 2. Melakukan Looping Menggunakan For
 ```js
@@ -15,6 +28,16 @@
 // Untuk membuat tantangan ini lebih menarik, kamu juga diminta untuk membuat suatu looping yang menghitung maju dan 
 // menghitung mundur. Jangan lupa tampilkan di console juga judul 'LOOPING PERTAMA' dan 'LOOPING KEDUA'.
 //tampilkan output yang menunjukan kalau looping itu maju pada looping pertama dan mundur pada looping kedua
+console.log("LOOPING PERTAMA");
+
+for (let i = 1; i <= 10; i += 1) {
+  console.log("Looping bertambah, ke-" + i);
+}
+console.log("LOOPING KEDUA");
+
+for (let j = 10; j >= 1; j -= 1) {
+  console.log("Looping berkurang, ke-" + j);
+}
 ```
 ## Soal 3. Angka Ganjil dan Genap
 
@@ -27,6 +50,14 @@
 
 // Apabila angka counter adalah angka genap, tuliskan GENAP
 // Apabila angka counter adalah angka ganjil, tuliskan GANJIL
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i + " - GENAP");
+  } else {
+    console.log(i + " - GANJIL");
+  }
+}
+
 ```
 ## Soal 4. counter kelipatan
 ```js
@@ -34,8 +65,26 @@
 // Pada 3 perulangan baru ini periksa setiap angka counter:
 
 // Apabila bukan kelipatan yang ditentukan tidak perlu menuliskan apa-apa
-// Apabila angka counter adalah kelipatan 3 dengan pertambahan 2, kelipatan 6 dengan pertambahan 5, dan kelipatan 10 dengan pertambahan 9, tuliskan:
+// Apabila angka counter adalah kelipatan 3 de  ngan pertambahan 2, kelipatan 6 dengan pertambahan 5, dan kelipatan 10 dengan pertambahan 9, tuliskan:
 // "3 kelipatan 3"dan seterusnya.
+console.log("Counter dengan pertambahan 2");
+for(let i = 1; i<=100; i+=2){
+    if(i % 3 === 0){
+        console.log(i + " kelipatan 3");
+    }
+}
+console.log("Counter dengan pertambahan 5");
+for(let i = 1; i<=100; i+=5){
+    if(i % 6 === 0){
+        console.log(i + " kelipatan 6");
+    }
+}
+console.log("Counter dengan pertambahan 9");
+for(let i = 1; i<=100; i+=9){
+    if(i % 10 === 0){
+        console.log(i + " kelipatan 10");
+    }
+}
 ```
 ## Soal 5. Bintang asteriks
 ```js
@@ -47,6 +96,14 @@ let input = 5
 //***
 //****
 //*****
+let input = 8;
+for(let i = 0; i<= input; i++) {
+  let star = ''
+  for(let j = 0; j<i; j++) {
+    star+="*";
+  };
+  console.log(star);
+};
 ```
 
 ---

@@ -12,7 +12,9 @@
 // Jika kedua angka bernilai sama, function akan me-return -1.
 
 function bandingkanAngka(angka1, angka2) {
-  //code disini
+  if (angka1 === angka2 ){
+    return -1
+  }
 }
   
   // TEST CASES
@@ -30,7 +32,11 @@ function bandingkanAngka(angka1, angka2) {
 // Function akan me-return kata yang dibalik. Contoh, jika kata adalah "John Doe", function akan me-return "eoD nhoJ".
 
 function balikKata(kata) {
-    // you can only write your code here!
+    let katabalik = [];
+    for(let i = kata.length - 1; i >= 0; i--){
+      katabalik.push(kata[i]);
+    }
+    return katabalik.join('');
 }
   
 // TEST CASES
@@ -50,7 +56,15 @@ console.log(balikKata('Super')); // repuS
 // Contoh, jika menit adalah 63, maka function akan me-return "1:03".
 
 function konversiMenit(menit) {
-    // you can only write your code here!
+   let jam = Math.floor(menit / 60);
+    let sisaMenit = menit % 60;
+    let menitStr;
+    if (sisaMenit < 10){
+        menitStr = '0' + sisaMenit;
+    }else{
+        menitStr = sisaMenit;
+    }
+    return `${jam}:${menitStr}`;
 }
   
 // TEST CASES
@@ -68,7 +82,20 @@ console.log(konversiMenit(120)); // 2:00
 //   Function akan me-return true jika jumlah karakter x sama dengan jumlah karakter o, dan false jika tidak.
 
 function xo(str) {
-    // you can only write your code here!
+    let o = 0;
+    let x = 0;
+    for(let i = 0; i<str.length; i++){
+      if(str[i] === 'o'){
+        o += 1;
+      }else if(str[i] === 'x'){
+        x += 1;
+      }
+    }
+    if (x === o){
+      return true
+    }else{
+      return false
+    }
 }
   
 // TEST CASES
